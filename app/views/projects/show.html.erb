@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<div class="container-fluid text-left"
+<div class="container-fluid text-left">
 <p>
   <strong>Title:</strong>
   <%= @project.title %>
@@ -20,6 +20,7 @@
   <strong>Date:</strong>
   <%= @project.date %>
 </p>
+</div>
 
 <%= link_to 'Edit', edit_project_path(@project) %> |
 <%= link_to 'Back', projects_path %>
