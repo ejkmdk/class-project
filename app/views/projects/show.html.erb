@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<div class="container-fluid text-left">
+<p>
+  <strong>Title:</strong>
+  <%= @project.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @project.description %>
+</p>
+
+<p>
+  <strong>Rating:</strong>
+  <%= @project.rating %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @project.date %>
+</p>
+</div>
+
+<%= link_to 'Back', projects_path %> |
+<%= link_to 'Edit', edit_project_path(@project) %> 
+
