@@ -22,6 +22,20 @@
 </p>
 </div>
 
+<% if @comments.any? %>
+  <h3>Comments</h3>
+  <% @comments.each do |comment| %>
+    <p><%= comment.content %></p>
+  <% end %>
+<% end %>
+
+<%= form_for [@project, @comment] do |f| %>
+  <%= f.text_area :content, placeholder: "Add a comment..." %>
+  <%= f.submit "Submit" %>
+<% end %>
+
+
+
 <%= link_to 'Back', projects_path %> |
 <%= link_to 'Edit', edit_project_path(@project) %> 
 
